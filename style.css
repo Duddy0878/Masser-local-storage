@@ -22,7 +22,7 @@ a:hover{
 
 .box{
    border: solid 4px white;
-   width: 51%;
+   width: 53%;
    margin-left: 50%;
    transform: translate(-50%);
    margin-top: 10%;
@@ -155,7 +155,6 @@ table{
 .historyBox{
     display: none;
     position: absolute;
-    margin: 5px;
     top: 160px;
     left: 50%;
     transform: translate(-50%);
