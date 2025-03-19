@@ -191,6 +191,10 @@ tr:nth-child(even){
  background-color: rgb(138, 194, 201);;
 }
 
+td:nth-child(last){
+ width: 20px;
+}
+
 .closeHistory{
     position: absolute;
     top: 0px;
