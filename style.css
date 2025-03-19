@@ -155,7 +155,6 @@ table{
 .historyBox{
     display: none;
     position: absolute;
-    padding: 1px;
     top: 160px;
     left: 50%;
     transform: translate(-50%);
