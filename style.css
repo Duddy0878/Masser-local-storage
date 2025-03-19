@@ -163,7 +163,7 @@ table{
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    border: 2px white solid;
+    border: 1px white solid;
     border-bottom: none;
 }
 
