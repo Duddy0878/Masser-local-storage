@@ -26,6 +26,8 @@ displayBalance();
 var form = document.querySelector('form')
 var addMore = document.querySelector('.maaserInput');
 var addEarned = document.querySelector('.earnedInput');
+var weekInput = document.querySelector('.weekInput');
+var week2Input = document.querySelector('.week2Input');
 
 
 addEarned.addEventListener('keyup', (e) => {
@@ -42,6 +44,7 @@ addEarned.addEventListener('keyup', (e) => {
 
 form.addEventListener('submit', (e) => {
     var addMoreValue = addMore.value
+    
 
     // add Maaser
     var addMOreToNum = Number(addMoreValue);  
@@ -55,7 +58,7 @@ form.addEventListener('submit', (e) => {
             date: today.format('MM/DD/YY'),
             type: '++',
             amount: addMoreValue,
-            payedTo: '"My Maaser"' 
+            payedTo:  weekInput.value + "/" + week2Input.value
         }
     )
 
@@ -147,7 +150,7 @@ for(let i = 0; i< getHistory.length; i++)
     <td>${donation.payedTo}</td>
     
     `
-    tbody.appendChild(tr)
+    tbody.appendChild(tr);
     
 }
 
