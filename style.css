@@ -33,7 +33,7 @@ a:hover{
 }
 
 .optContainer{
-    padding: 70px;
+    padding: 72px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
