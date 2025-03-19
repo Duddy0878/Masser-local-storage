@@ -164,7 +164,7 @@ table{
     -ms-overflow-style: none;
     scrollbar-width: none;
     border: 2px white solid;
-    border-bottem: none;
+    border-bottom: none;
 }
 
 th{
