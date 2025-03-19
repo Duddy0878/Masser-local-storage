@@ -22,7 +22,7 @@ a:hover{
 
 .box{
    border: solid 4px white;
-   width: 60%;
+   width: 50%;
    margin-left: 50%;
    transform: translate(-50%);
    margin-top: 10%;
