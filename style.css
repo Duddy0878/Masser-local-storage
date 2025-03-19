@@ -188,6 +188,10 @@ td:last-child{
     font-size: 15px;
 }
 
+th:last-child{
+    font-size: 25px;
+}
+
 tr:nth-child(odd){
     background-color: rgb(41, 173, 190);;
 }
