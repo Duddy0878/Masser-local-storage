@@ -170,7 +170,7 @@ table{
 th{
     background-color: white;
     color: rgb(41, 173, 190);;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 th, td{
@@ -180,7 +180,11 @@ th, td{
 }
 
 td{
-    font-size: 20px;
+    font-size: 25px;
+}
+
+td:last-child{
+    font-size: 15px;
 }
 
 tr:nth-child(odd){
