@@ -22,7 +22,7 @@ a:hover{
 
 .box{
    border: solid 4px white;
-   width: 50%;
+   width: 55%;
    margin-left: 50%;
    transform: translate(-50%);
    margin-top: 10%;
@@ -163,8 +163,7 @@ table{
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-/*     border: 1px white solid; */
-    border-bottom: none;
+
 }
 
 th{
