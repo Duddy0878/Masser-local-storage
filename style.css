@@ -160,6 +160,7 @@ table{
     transform: translate(-50%);
     background-color: rgb(41, 173, 190);;
     height: 300px;
+    width: 620px;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
