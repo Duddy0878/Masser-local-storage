@@ -22,7 +22,7 @@ a:hover{
 
 .box{
    border: solid 4px white;
-   width: 55%;
+   width: 50%;
    margin-left: 50%;
    transform: translate(-50%);
    margin-top: 10%;
@@ -33,7 +33,7 @@ a:hover{
 }
 
 .optContainer{
-    padding: 70px;
+    padding: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
