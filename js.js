@@ -174,6 +174,9 @@ printout.addEventListener('click', () => {
       type: 'html',
       targetStyles: ['*'] // Include all styles
     });
+
+    // modalHistory.style.display = 'none';
+    total.style.display = 'none';
   });
 
 
