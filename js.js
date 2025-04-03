@@ -125,6 +125,8 @@ closePayMaaser.addEventListener('click', ()=> {
 var openHistory = document.querySelector('.openHistory');
 var modalHistory = document.querySelector('.historyBox');
 var closeHistory = document.querySelector('.closeHistory');
+var total = document.querySelector('.total')
+total.innerHTML = `Total `+ ` = ` + document.querySelector('.amount').innerHTML 
 
 openHistory.addEventListener('click', ()=> {
     modalHistory.style.display = 'block'
@@ -132,6 +134,7 @@ openHistory.addEventListener('click', ()=> {
 
 closeHistory.addEventListener('click', ()=>{
     modalHistory.style.display = 'none';
+    total.style.display = 'none';
 })
 
 
@@ -154,14 +157,24 @@ for(let i = 0; i< getHistory.length; i++)
     
 }
 
+
+
+
+
+
 var printout = document.querySelector('.printOUT');
-var tableTP = document.querySelector('table');
+
 
 printout.addEventListener('click', () => {
-  window.print(tableTP)
-  console.log('hi');
-  
-})
+    total.style.display = 'block';
+    console.log(document.getElementById('tableTP').innerHTML);
+    
+    printJS({
+      printable: 'tableTP' , // The ID of the element to print
+      type: 'html',
+      targetStyles: ['*'] // Include all styles
+    });
+  });
 
 
 
