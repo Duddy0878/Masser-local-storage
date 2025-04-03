@@ -126,7 +126,7 @@ var openHistory = document.querySelector('.openHistory');
 var modalHistory = document.querySelector('.historyBox');
 var closeHistory = document.querySelector('.closeHistory');
 var total = document.querySelector('.total')
-total.innerHTML = `Total `+ ` = ` + document.querySelector('.amount').innerHTML 
+total.innerHTML =`------------------------ <br>` + `Total `+ ` = ` + document.querySelector('.amount').innerHTML 
 
 openHistory.addEventListener('click', ()=> {
     modalHistory.style.display = 'block'

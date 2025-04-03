@@ -214,8 +214,18 @@ tr:nth-child(even){
     right: 19px;
     cursor: pointer;
 }
+/* 
+.total::before{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 250px;
+    bottom: -75px;
+    background-color: white;
+
+} */
 .total{
-    display: none;
+    /* display: none; */
     font-size: 40px;
     text-align: center;
 }
