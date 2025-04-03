@@ -200,10 +200,18 @@ tr:nth-child(even){
  background-color: rgb(138, 194, 201);;
 }
 
+
 .closeHistory{
     position: absolute;
     top: 0px;
     right: 0px;
+    cursor: pointer;
+}
+
+.printOUT{
+    position: absolute;
+    top: 0px;
+    right: 19px;
     cursor: pointer;
 }
 

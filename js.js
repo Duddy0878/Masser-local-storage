@@ -154,6 +154,15 @@ for(let i = 0; i< getHistory.length; i++)
     
 }
 
+var printout = document.querySelector('.printOUT');
+var tableTP = document.querySelector('table');
+
+printout.addEventListener('click', () => {
+  window.print(tableTP)
+  console.log('hi');
+  
+})
+
 
 
 
