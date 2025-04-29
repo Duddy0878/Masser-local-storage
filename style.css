@@ -13,6 +13,9 @@ h1{
 }
 .settings{
    position: absolute;
+    right: 20px;
+    top:20px;
+    
 }
 h3{
     padding: 10px;
