@@ -11,7 +11,9 @@ body{
 h1{
     padding-top: 30px;
 }
-
+.settings{
+   position: absolute;
+}
 h3{
     padding: 10px;
 }
