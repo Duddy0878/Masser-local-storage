@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 960" width="24px" height="24px" fill="#FFFFFF">
+  <!-- Coin (circle) above hand -->
+  <circle cx="640" cy="180" r="80" fill="none" stroke="white" stroke-width="16"/>
+    <circle cx="550" cy="360" r="80" fill="none" stroke="white" stroke-width="16"/>
+  <!-- Hand (original path, minus heart) -->
+  <path d="M280 740l278 76 238-74q-5-9-14.5-15.5T760 720H558q-27 0-43-2t-33-8l-93-31 22-78 81 27q17 5 40 8t68 4q0-11-6.5-21T578 606l-234-86h-64v220ZM40 880V440h304q7 0 14 1.5t13 3.5l235 87q33 12 53.5 42t20.5 66h80q50 0 85 33t35 87v40L560 860l-280-78v58H40Zm80-80h80V520h-80v280Z"/>
+</svg>

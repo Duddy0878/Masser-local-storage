@@ -15,8 +15,19 @@ h1{
    position: absolute;
     right: 20px;
     top:20px;
-    
+    cursor: pointer;
 }
+
+.payCheck{
+    position: absolute;
+    right: 60px;
+    top: 18px;
+    cursor: pointer;
+}
+
+.settings:hover, .payCheck:hover{
+      transform: scale(1.1);
+    }
 h3{
     padding: 10px;
 }
