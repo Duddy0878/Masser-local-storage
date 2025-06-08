@@ -194,10 +194,13 @@ printout.addEventListener('click', () => {
     doc.save('maaser_history.pdf');
 });
 
+// ========= payCheck =============
 
+var payCheckBtn = document.querySelector('.payCheck');
 
-
-
+payCheckBtn.addEventListener('click', () => {
+  alert('This feature is coming soon!');
+})
 
 
 
