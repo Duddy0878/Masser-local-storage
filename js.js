@@ -182,19 +182,18 @@ printout.addEventListener('click', () => {
     total.style.display = 'none';
   });
 
-    document.querySelector('.download').addEventListener('click', function () {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF();
+  document.querySelector('.download').addEventListener('click', function () {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-        doc.text('Maaser Donation History', 14, 16);
+    doc.text('Maaser Donation History', 14, 16);
 
-        // Collect table rows
-        const table = document.getElementById('tableTP');
-        window.jspdf.autoTable(doc, { html: table, startY: 22 });
+    // Collect table rows
+    const table = document.getElementById('tableTP');
+    doc.autoTable({ html: table, startY: 22 });
 
-        doc.save('maaser_history.pdf');
-    });
-
+    doc.save('maaser_history.pdf');
+});
 
 
 
