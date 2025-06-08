@@ -4,6 +4,10 @@
     text-align: center;
 }
 
+svg:hover{
+    transform: scale(1.1);
+}
+
 body{
     background-color: rgb(41, 173, 190);
 }
@@ -228,6 +232,13 @@ tr:nth-child(even){
     position: absolute;
     top: 0px;
     right: 19px;
+    cursor: pointer;
+}
+
+.download{
+    position: absolute;
+    top: 0px;
+    right: 38px;
     cursor: pointer;
 }
 
