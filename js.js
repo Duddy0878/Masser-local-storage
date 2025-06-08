@@ -179,18 +179,18 @@ printout.addEventListener('click', () => {
     total.style.display = 'none';
   });
 
-  // ...existing code...
-document.querySelector('.download').addEventListener('click', function () {
-    printJS({
-        printable: 'tableTP',
-        type: 'html',
-        header: 'Maaser Donation History',
-        style: 'th,td { padding: 8px; border: 1px solid #ccc; } table { border-collapse: collapse; width: 100%; }',
-        scanStyles: false,
-        documentTitle: 'maaser_history'
-    });
-});
-// ...existing code...
+        document.querySelector('.download').addEventListener('click', function () {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.text('Maaser Donation History', 14, 16);
+
+            // Collect table rows
+            const table = document.getElementById('tableTP');
+            window.jspdf.autoTable(doc, { html: table, startY: 22 });
+
+            doc.save('maaser_history.pdf');
+        });
 
 
 
