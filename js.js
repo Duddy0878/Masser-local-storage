@@ -183,6 +183,7 @@ var printout = document.querySelector('.printOUT');
 
 printout.addEventListener('click', () => {
     total.style.display = 'block';
+console.log(document.getElementById('tableTP').innerHTML);
 
     printJS({
         printable: 'tableTP',
