@@ -1,0 +1,69 @@
+h3{
+    cursor: default;
+}
+.calnder {
+ margin-top: 200px;
+}
+
+.calnder table {
+    width: 300px;
+}
+
+.calnder td{
+   width: 30px;
+   padding-left: 16px;
+   padding-right: 16px;
+}
+
+.today {
+    border: 2px solid #29adbe;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #29adbe;
+    background: #fff !important;
+    box-sizing: border-box;
+}
+
+.month-container {
+    display: none;
+    vertical-align: top;
+    margin: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 8px;
+    background: #fafcff;
+    box-shadow: 0 2px 8px #eee;
+}
+
+
+.calendar-table {
+    border-collapse: collapse;
+    width: 220px;
+    margin: 0 auto;
+}
+.calendar-table th, .calendar-table td {
+    border: 1px solid #ddd;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    font-size: 15px;
+}
+.today {
+    border: 2px solid #29adbe;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #29adbe;
+    background: #fff !important;
+    box-sizing: border-box;
+}
+
+.left-arrow, .right-arrow {
+  transition: transform 0.2s;
+  display: inline-block;
+  cursor:pointer;
+  color:rgb(41, 173, 190);
+}
+
+.left-arrow:hover, .right-arrow:hover {
+  transform: scale(1.2);
+}

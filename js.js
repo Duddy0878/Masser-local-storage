@@ -241,7 +241,7 @@ var printout = document.querySelector('.printOUT');
         });
 
         total.style.display = 'none';
-        });
+  });
 
 
   document.querySelector('.download').addEventListener('click', function () {
@@ -265,6 +265,129 @@ payCheckBtn.addEventListener('click', () => {
   alert('This feature is coming soon!');
 })
 
+function renderYearCalendar() {
+    const calendarDiv = document.querySelector('.calnder');
+    calendarDiv.innerHTML = ''; // Clear previous content
+
+    const today = dayjs();
+    const year = today.year();
+    const currentMonth = today.month();
+    const currentDay = today.date();
+
+    for (let month = 0; month < 12; month++) {
+        // Create month container
+        const monthContainer = document.createElement('div');
+        monthContainer.classList.add(`month-container`);
+        monthContainer.id = `month-${month}`;
+        // Month name
+        const monthName = dayjs(`${year}-${month + 1}-01`).format('MMMM');
+        monthContainer.innerHTML = `<h3 style="text-align:center;color:rgb(41, 173, 190);margin:10px 0;">
+        <span class="left-arrow">&#9664;</span>&nbsp;&nbsp;${monthName}&nbsp;&nbsp;<span class="right-arrow">&#9654;</span>
+        </h3>`;
+
+        // Create table
+        const table = document.createElement('table');
+        table.classList.add('calendar-table');
+        table.innerHTML = `
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        `;
+        const tbody = table.querySelector('tbody');
+
+        const daysInMonth = dayjs(`${year}-${month + 1}-01`).daysInMonth();
+        const firstDay = dayjs(`${year}-${month + 1}-01`).day();
+
+        let day = 1;
+        for (let week = 0; week < 6 && day <= daysInMonth; week++) {
+            const tr = document.createElement('tr');
+            for (let d = 0; d < 7; d++) {
+                const td = document.createElement('td');
+                td.classList.add('day');
+                if (week === 0 && d < firstDay) {
+                    td.innerHTML = '';
+                } else if (day > daysInMonth) {
+                    td.innerHTML = '';
+                } else {
+                    td.innerHTML = day;
+                    // Circle today
+                    if (month === currentMonth && day === currentDay) {
+                        td.classList.add('today');
+                    }
+                    day++;
+                }
+                tr.appendChild(td);
+            }
+            tbody.appendChild(tr);
+        }
+
+        monthContainer.appendChild(table);
+        calendarDiv.appendChild(monthContainer);
+    }
+}
+renderYearCalendar();
+
+var currentMonth = dayjs().month();
+displayMonth(currentMonth);
+
+function nextMonth(){
+    disapapreMonth(currentMonth);
+    currentMonth++;
+    displayMonth(currentMonth);
+}
+function backMonth(){
+    disapapreMonth(currentMonth);
+    currentMonth--;
+    displayMonth(currentMonth);
+}
+var nextBtn = document.querySelectorAll('.right-arrow');
+
+
+nextBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+   
+    nextMonth();
+    
+})
+})
+
+var backBtn = document.querySelectorAll('.left-arrow');
+
+
+backBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+   
+  backMonth();
+    
+})
+})
+
+
+function displayMonth(month){
+
+  var getMonth = month;
+  
+  var getHtmlMonth = document.getElementById(`month-${getMonth}`);
+
+  getHtmlMonth.style.display = 'block';
+}
+
+function disapapreMonth(month) {
+  var getMonth = month;
+  
+  var getHtmlMonth = document.getElementById(`month-${getMonth}`);
+
+  getHtmlMonth.style.display = 'none';
+}
 
 
 
