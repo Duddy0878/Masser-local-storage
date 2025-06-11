@@ -86,7 +86,7 @@ a:hover{
     padding: 20px;
 }
 
-.addMaaser input{
+.addMaaser input, .addMaaser select{
     background: rgb(41, 173, 190);;
     border: solid 2px white;
 

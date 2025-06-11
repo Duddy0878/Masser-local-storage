@@ -164,23 +164,6 @@ for(let i = 0; i< getHistory.length; i++)
 
 var printout = document.querySelector('.printOUT');
 
-
-// printout.addEventListener('click', () => {
-//     total.style.display = 'block';
-//     console.log(document.getElementById('tableTP').innerHTML);
-    
-//     printJS({
-//         printable: 'tableTP',
-//         type: 'html',
-//         style: 'th,td { padding: 8px; border: 1px solid #ccc; } table { border-collapse: collapse; width: 100%; }',
-//         scanStyles: false,
-//         documentTitle: 'maaser_history'
-//     });
-
-//     // modalHistory.style.display = 'none';
-//     total.style.display = 'none';
-//   });
-
     printout.addEventListener('click', () => {
         total.style.display = 'block';
     
@@ -265,6 +248,28 @@ payCheckBtn.addEventListener('click', () => {
   alert('This feature is coming soon!');
 })
 
+// weekly paycheck
+
+var weekPay = []
+
+
+for (let i = 0; i < maaser.donations.length; i++) {
+    const payedTo = maaser.donations[i].payedTo;
+    // Only push if there is a date before the slash
+    if (payedTo.includes('MZ-WORK') && payedTo.includes('/')) {
+        const datePart = payedTo.split('/')[0];
+        if (datePart && datePart.trim() !== "") {
+            weekPay.push(datePart);
+        }
+    }
+}
+
+
+
+console.log(weekPay);
+
+// calnder
+
 function renderYearCalendar() {
     const calendarDiv = document.querySelector('.calnder');
     calendarDiv.innerHTML = ''; // Clear previous content
@@ -308,26 +313,52 @@ function renderYearCalendar() {
         const firstDay = dayjs(`${year}-${month + 1}-01`).day();
 
         let day = 1;
+        var thisWeek = false
         for (let week = 0; week < 6 && day <= daysInMonth; week++) {
             const tr = document.createElement('tr');
-            for (let d = 0; d < 7; d++) {
-                const td = document.createElement('td');
-                td.classList.add('day');
-                if (week === 0 && d < firstDay) {
-                    td.innerHTML = '';
-                } else if (day > daysInMonth) {
-                    td.innerHTML = '';
-                } else {
-                    td.innerHTML = day;
-                    // Circle today
-                    if (month === currentMonth && day === currentDay) {
-                        td.classList.add('today');
-                    }
-                    day++;
-                }
-                tr.appendChild(td);
+           
+            
+        for (let week = 0; week < 6 && day <= daysInMonth; week++) {
+    const tr = document.createElement('tr');
+    // Collect all dates for this week
+    let weekDates = [];
+    let tempDay = day;
+    for (let d = 0; d < 7; d++) {
+        const thisDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(tempDay).padStart(2, '0')}`;
+        // Only push valid days
+        if (!(week === 0 && d < firstDay) && tempDay <= daysInMonth) {
+            weekDates.push(thisDate);
+        }
+        tempDay++;
+    }
+    // Check if any date in this week is in weekPay
+    const highlightFriday = weekDates.some(date => weekPay.includes(date));
+
+    // Now render the week
+    for (let d = 0; d < 7; d++) {
+        const cellDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        const td = document.createElement('td');
+        td.classList.add('day');
+        if (week === 0 && d < firstDay) {
+            td.innerHTML = '';
+        } else if (day > daysInMonth) {
+            td.innerHTML = '';
+        } else {
+            td.innerHTML = day;
+            // Circle today
+            if (month === currentMonth && day === currentDay) {
+                td.classList.add('today');
             }
-            tbody.appendChild(tr);
+            // Highlight Friday if any day in this week is in weekPay
+            if (d === 5 && highlightFriday) {
+                td.classList.add('weekPayed');
+            }
+            day++;
+        }
+        tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+}
         }
 
         monthContainer.appendChild(table);
@@ -351,43 +382,35 @@ function backMonth(){
 }
 var nextBtn = document.querySelectorAll('.right-arrow');
 
-
 nextBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
-   
     nextMonth();
-    
 })
 })
 
 var backBtn = document.querySelectorAll('.left-arrow');
 
-
 backBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
-   
-  backMonth();
-    
+    backMonth();
 })
 })
 
 
 function displayMonth(month){
-
   var getMonth = month;
-  
   var getHtmlMonth = document.getElementById(`month-${getMonth}`);
-
   getHtmlMonth.style.display = 'block';
 }
 
 function disapapreMonth(month) {
   var getMonth = month;
-  
   var getHtmlMonth = document.getElementById(`month-${getMonth}`);
-
   getHtmlMonth.style.display = 'none';
 }
+
+
+
 
 
 
