@@ -353,6 +353,9 @@ function renderYearCalendar() {
             if (d === 5 && highlightFriday) {
                 td.classList.add('weekPayed');
             }
+            else if(d=== 5 && !highlightFriday) {
+                td.classList.add('notPayed');
+            }
             day++;
         }
         tr.appendChild(td);
