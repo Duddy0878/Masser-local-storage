@@ -485,11 +485,11 @@ autoBtn.addEventListener('click', () => {
 
     var closePayCheck = document.querySelector('.x');
 
-    closePayCheck.addEventListener('click', () => {
-    payCheckModal.style.display = 'none';
-    nowMonth = dayjs().month(); 
+        closePayCheck.addEventListener('click', () => {   
+        payCheckModal.style.display = 'none';
+        renderYearCalendar();
     
-})
+     })
 
 }
 renderYearCalendar();
