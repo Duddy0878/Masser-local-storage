@@ -286,7 +286,9 @@ for (let i = 0; i < maaser.donations.length; i++) {
 
 
 
+
 console.log(weekPay);
+
 
 // calnder
 
@@ -327,32 +329,26 @@ function renderYearCalendar() {
             </thead>
             <tbody></tbody>
         `;
+        
         const tbody = table.querySelector('tbody');
 
         const daysInMonth = dayjs(`${year}-${month + 1}-01`).daysInMonth();
         const firstDay = dayjs(`${year}-${month + 1}-01`).day();
 
         let day = 1;
-        var thisWeek = false
-        for (let week = 0; week < 6 && day <= daysInMonth; week++) {
-            const tr = document.createElement('tr');
-           
             
         for (let week = 0; week < 6 && day <= daysInMonth; week++) {
-    const tr = document.createElement('tr');
-    // Collect all dates for this week
-    let weekDates = [];
-    let tempDay = day;
-    for (let d = 0; d < 7; d++) {
-        const thisDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(tempDay).padStart(2, '0')}`;
-        // Only push valid days
-        // if (!( d < firstDay) && tempDay <= daysInMonth) {
-            weekDates.push(thisDate);
-        // }
-      
-        
+            const tr = document.createElement('tr');
+            // Collect all dates for this week
+            let weekDates = [];
+            let tempDay = day;
+            for (let d = 0; d < 7; d++) {
+                const thisDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(tempDay).padStart(2, '0')}`;
+            
+               weekDates.push(thisDate);
+             
         tempDay++;
-    }
+        }
     
     // Check if any date in this week is in weekPay
     const highlightFriday = weekDates.some(date => weekPay.includes(date));
@@ -385,7 +381,7 @@ function renderYearCalendar() {
     }
     tbody.appendChild(tr);
 }
-        }
+        
 
         monthContainer.appendChild(table);
         calendarDiv.appendChild(monthContainer);
