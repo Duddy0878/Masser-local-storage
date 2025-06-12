@@ -264,14 +264,10 @@ var printout = document.querySelector('.printOUT');
 
 var payCheckBtn = document.querySelector('.payCheck');
 var payCheckModal = document.querySelector('.calnder');
-var closePayCheck = document.querySelector('.x');
+
 
 payCheckBtn.addEventListener('click', () => {
   payCheckModal.style.display = 'block';
-})
-
-closePayCheck.addEventListener('click', () => {
-    payCheckModal.style.display = 'none';
 })
 
 
@@ -394,6 +390,13 @@ function renderYearCalendar() {
         monthContainer.appendChild(table);
         calendarDiv.appendChild(monthContainer);
     }
+    var closePayCheck = document.querySelector('.x');
+
+    closePayCheck.addEventListener('click', () => {
+    payCheckModal.style.display = 'none';
+    console.log('hi');
+    
+})
 }
 renderYearCalendar();
 
