@@ -349,8 +349,11 @@ function renderYearCalendar() {
         if (!(week === 0 && d < firstDay) && tempDay <= daysInMonth) {
             weekDates.push(thisDate);
         }
+        console.log(weekDates);
+        
         tempDay++;
     }
+    console.log(weekDates);
     // Check if any date in this week is in weekPay
     const highlightFriday = weekDates.some(date => weekPay.includes(date));
 
