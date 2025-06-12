@@ -276,7 +276,7 @@ var weekPay = []
 for (let i = 0; i < maaser.donations.length; i++) {
     const payedTo = maaser.donations[i].payedTo;
     // Only push if there is a date before the slash
-    if (payedTo.includes('MZ-WORK') && payedTo.includes('/')) {
+    if ( payedTo.toUpperCase().includes('MZ-WORK') && payedTo.includes('/')) {
         const datePart = payedTo.split('/')[0];
         if (datePart && datePart.trim() !== "") {
             weekPay.push(datePart);
@@ -346,14 +346,14 @@ function renderYearCalendar() {
     for (let d = 0; d < 7; d++) {
         const thisDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(tempDay).padStart(2, '0')}`;
         // Only push valid days
-        if (!(week === 0 && d < firstDay) && tempDay <= daysInMonth) {
+        // if (!( d < firstDay) && tempDay <= daysInMonth) {
             weekDates.push(thisDate);
-        }
-        console.log(weekDates);
+        // }
+      
         
         tempDay++;
     }
-    console.log(weekDates);
+    
     // Check if any date in this week is in weekPay
     const highlightFriday = weekDates.some(date => weekPay.includes(date));
 
