@@ -441,33 +441,25 @@ function renderYearCalendar() {
         monthContainer.appendChild(table);
         calendarDiv.appendChild(monthContainer);
     }
-    var closePayCheck = document.querySelector('.x');
 
-    closePayCheck.addEventListener('click', () => {
-    payCheckModal.style.display = 'none';
-    console.log('hi');
-    
-})
-}
-renderYearCalendar();
 
-var currentMonth = dayjs().month();
-displayMonth(currentMonth);
+var nowMonth = dayjs().month();
+displayMonth(nowMonth);
 
 function nextMonth(){
-    disapapreMonth(currentMonth);
-    if (currentMonth < 11) {
-        currentMonth++ ; 
+    disapapreMonth(nowMonth);
+    if (nowMonth < 11) {
+        nowMonth++ ; 
     }
-    displayMonth(currentMonth);
+    displayMonth(nowMonth);
 }
 function backMonth(){
-    disapapreMonth(currentMonth);
+    disapapreMonth(nowMonth);
     
-    if (currentMonth > 0) {
-        currentMonth-- ; 
+    if (nowMonth > 0) {
+        nowMonth-- ; 
     }
-    displayMonth(currentMonth);
+    displayMonth(nowMonth);
 }
 var nextBtn = document.querySelectorAll('.right-arrow');
 
@@ -484,6 +476,24 @@ backBtn.forEach((btn) => {
     backMonth();
 })
 })
+
+var autoBtn = document.querySelector('.auto');
+
+autoBtn.addEventListener('click', () => {
+  alert('not implemented yet');
+})
+
+    var closePayCheck = document.querySelector('.x');
+
+    closePayCheck.addEventListener('click', () => {
+    payCheckModal.style.display = 'none';
+    nowMonth = dayjs().month(); 
+    
+})
+
+}
+renderYearCalendar();
+
 
 
 function displayMonth(month){
