@@ -40,7 +40,16 @@ addEarned.addEventListener('keyup', (e) => {
     addMore.value = newFixed
  })
 
+var displayType = document.querySelector('.dateDisplay');
 
+week2Input.addEventListener('change', (e) => {
+    if (week2Input.value === 'MZ-WORK' 
+        || week2Input.value === 'Kollel'
+    ) {
+        displayType.style.display = 'inline-block';
+        
+    }
+})
 
 form.addEventListener('submit', (e) => {
     var addMoreValue = addMore.value
@@ -50,6 +59,15 @@ form.addEventListener('submit', (e) => {
     var addMOreToNum = Number(addMoreValue);  
     const newMaaser = maaser.currentBalance + addMOreToNum;
     maaser.currentBalance = newMaaser;
+    var payedToo
+    if (week2Input.value === 'MZ-WORK' 
+        || week2Input.value === 'Kollel'
+    ){
+       payedToo = weekInput.value + "/" + week2Input.value
+    }
+    else {
+        payedToo = week2Input.value;
+    }
 
     const getMaaser = maaser.donations
     maaser.donations.push(
@@ -58,7 +76,7 @@ form.addEventListener('submit', (e) => {
             date: today.format('MM/DD/YY'),
             type: '++',
             amount: addMoreValue,
-            payedTo:  weekInput.value + "/" + week2Input.value
+            payedTo:  payedToo
         }
     )
 
@@ -72,6 +90,8 @@ closeAdd.addEventListener('click', ()=> {
     modalAdd.style.display = 'none';
     addMore.value = '';
      addEarned.value = '';
+     displayType.style.display = 'none';
+     week2Input.value = '';
 })
 
 // pay off maaser ===============================

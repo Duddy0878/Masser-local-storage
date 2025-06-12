@@ -1,0 +1,187 @@
+{
+  "currentBalance": 1797,
+  "donations": [
+    {
+      "donationId": "afd49ea8-ff8e-4dfc-833b-359c02b12b1d",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "1018",
+      "payedTo": "/1 after wedding"
+    },
+    {
+      "donationId": "06689ddd-d872-4255-8d84-8afda5a73765",
+      "date": "03/18/25",
+      "type": "--",
+      "amount": 500,
+      "payedTo": "Matbei"
+    },
+    {
+      "donationId": "33a77e79-a290-4d86-8cb2-d426c91f461f",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "240",
+      "payedTo": "/2 after wedding"
+    },
+    {
+      "donationId": "51cd2694-462d-417c-9390-c64b76f4414d",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-03-07/MZ-WORK"
+    },
+    {
+      "donationId": "59ff9055-aa4c-471f-8605-c28647156231",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-03-14/MZ-WORK"
+    },
+    {
+      "donationId": "8296ef4b-2e12-4791-9441-55030c93e309",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "19",
+      "payedTo": "2025-03-14/KOLLEL 2 weeks"
+    },
+    {
+      "donationId": "dc734d9a-5a35-4acf-9376-c85b279d8273",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "25",
+      "payedTo": "/MZ Purim Bunos"
+    },
+    {
+      "donationId": "4fd631fe-db35-4d9c-849d-113ee61bfb6d",
+      "date": "03/18/25",
+      "type": "++",
+      "amount": "",
+      "payedTo": "/"
+    },
+    {
+      "donationId": "6fd6dc6c-0602-4464-98ef-379dc1c4ce1d",
+      "date": "03/27/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-03-21/MZ-WORK"
+    },
+    {
+      "donationId": "17e4c1d8-89cd-4a3d-8304-64b47808d702",
+      "date": "03/27/25",
+      "type": "++",
+      "amount": "10",
+      "payedTo": "/ziedy Purim"
+    },
+    {
+      "donationId": "a14feef3-3132-4b38-8ebc-87580d3bd105",
+      "date": "04/03/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-03-28/MZ-WORK"
+    },
+    {
+      "donationId": "9fdfac9f-720c-4f63-bd64-4acd144af492",
+      "date": "04/03/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-04-04/MZ-WORK"
+    },
+    {
+      "donationId": "4ad48745-0177-41d9-9ac0-f2ba3ba204d2",
+      "date": "04/03/25",
+      "type": "++",
+      "amount": "16",
+      "payedTo": "2025-04-04/KOLLEL 2 weeks"
+    },
+    {
+      "donationId": "2186f8d2-ac10-4e5b-b485-b60153e85bc5",
+      "date": "04/22/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-04-11/MZ-WORK"
+    },
+    {
+      "donationId": "bd04a9b7-1090-4f85-b997-43e1ad2ec639",
+      "date": "04/28/25",
+      "type": "--",
+      "amount": 500,
+      "payedTo": "Matbei"
+    },
+    {
+      "donationId": "a098cb86-598b-4d53-be33-3659d12d8c12",
+      "date": "04/28/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-04-18/MZ-WORK"
+    },
+    {
+      "donationId": "26c301a5-d928-4674-8d07-8437569a4efb",
+      "date": "04/28/25",
+      "type": "++",
+      "amount": "75",
+      "payedTo": "/MZ Passover bonus"
+    },
+    {
+      "donationId": "8d1d5bfd-c0ae-4988-8543-b29cc89f1990",
+      "date": "04/28/25",
+      "type": "++",
+      "amount": "50",
+      "payedTo": "/BOBBy WEIS"
+    },
+    {
+      "donationId": "5da420cb-1cca-4967-b407-534529e5f12a",
+      "date": "04/28/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-04-25/MZ-WORK"
+    },
+    {
+      "donationId": "649854a8-a4d2-44ab-8334-ecdb32015e69",
+      "date": "04/29/25",
+      "type": "--",
+      "amount": 100,
+      "payedTo": "KOLLEL"
+    },
+    {
+      "donationId": "f1f55202-be0f-405c-b7b0-d6a3ae961422",
+      "date": "05/06/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-05-02/MZ-WORK"
+    },
+    {
+      "donationId": "26e2c249-68cf-4cf3-b8f6-7c9799a23933",
+      "date": "05/15/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-05-09/MZ-WORK"
+    },
+    {
+      "donationId": "b32671fd-b363-47e5-99b9-6f24f34757ad",
+      "date": "05/15/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-05-16/MZ-WORK"
+    },
+    {
+      "donationId": "b03d2cfd-9833-4feb-a76e-91a076fbd12e",
+      "date": "05/26/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-05-23/MZ-WORK"
+    },
+    {
+      "donationId": "5c87df26-80c8-42d9-92cd-38c749e77fc0",
+      "date": "05/26/25",
+      "type": "++",
+      "amount": "13",
+      "payedTo": "2025-05-23/Kollel"
+    },
+    {
+      "donationId": "56fd511b-0be0-4357-bf58-d61cbedfa325",
+      "date": "06/06/25",
+      "type": "++",
+      "amount": "110",
+      "payedTo": "2025-05-30/MZ-WORK"
+    }
+  ]
+}
