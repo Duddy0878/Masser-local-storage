@@ -296,6 +296,50 @@ console.log(weekPay);
 
 // calnder
 
+// Simple static parsha table for 2025 (Gregorian date string: Parsha name in Hebrew)
+const parshaTable = {
+    "2025-01-04": "שמות",
+    "2025-01-11": "וארא",
+    "2025-01-18": "בא",
+    "2025-01-25": "בשלח",
+    "2025-02-01": "יתרו",
+    "2025-02-08": "משפטים",
+    "2025-02-15": "תרומה",
+    "2025-02-22": "תצוה",
+    "2025-03-01": "כי תשא",
+    "2025-03-08": "ויקהל",
+    "2025-03-15": "פקודי",
+    "2025-03-22": "ויקרא",
+    "2025-03-29": "צו",
+    "2025-04-05": "שמיני",
+    "2025-04-12": "תזריע",
+    "2025-04-19": "מצורע",
+    "2025-04-26": "אחרי מות",
+    "2025-05-03": "קדושים",
+    "2025-05-10": "אמור",
+    "2025-05-17": "בהר",
+    "2025-05-24": "בחוקותי",
+    "2025-05-31": "במדבר",
+    "2025-06-07": "נשא",
+    "2025-06-14": "בהעלותך",
+    "2025-06-21": "שלח",
+    "2025-06-28": "קורח",
+    "2025-07-05": "חקת",
+    "2025-07-12": "בלק",
+    "2025-07-19": "פינחס",
+    "2025-07-26": "מטות",
+    "2025-08-02": "מסעי",
+    "2025-08-09": "דברים",
+    "2025-08-16": "ואתחנן",
+    "2025-08-23": "עקב",
+    "2025-08-30": "ראה",
+    "2025-09-06": "שופטים",
+    "2025-09-13": "כי תצא",
+    "2025-09-20": "כי תבוא",
+    "2025-09-27": "נצבים",
+    // Add more as needed
+};
+
 function renderYearCalendar() {
     const calendarDiv = document.querySelector('.calnder');
     calendarDiv.innerHTML = '<svg class="x" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#29adbe"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> <div class="auto">Auto Update PayChecks </div>'; // Clear previous content
@@ -367,7 +411,14 @@ function renderYearCalendar() {
         } else if (day > daysInMonth) {
             td.innerHTML = '';
         } else {
-            td.innerHTML = day;
+            let cellContent = day;
+            if (d === 6) {
+                const shabbatDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                if (parshaTable[shabbatDate]) {
+                    cellContent += `<div style="font-size:11px;color: white;">${parshaTable[shabbatDate]}</div>`;
+                }
+            }
+            td.innerHTML = cellContent;
             // Circle today
             if (month === currentMonth && day === currentDay) {
                 td.classList.add('today');
