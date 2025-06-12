@@ -263,10 +263,18 @@ var printout = document.querySelector('.printOUT');
 // ========= payCheck =============
 
 var payCheckBtn = document.querySelector('.payCheck');
+var payCheckModal = document.querySelector('.calnder');
+var closePayCheck = document.querySelector('.x');
 
 payCheckBtn.addEventListener('click', () => {
-  alert('This feature is coming soon!');
+  payCheckModal.style.display = 'block';
 })
+
+closePayCheck.addEventListener('click', () => {
+    payCheckModal.style.display = 'none';
+})
+
+
 
 // weekly paycheck
 
@@ -294,7 +302,7 @@ console.log(weekPay);
 
 function renderYearCalendar() {
     const calendarDiv = document.querySelector('.calnder');
-    calendarDiv.innerHTML = ''; // Clear previous content
+    calendarDiv.innerHTML = '<svg class="x" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#29adbe"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> <div class="auto">Auto Update PayChecks </div>'; // Clear previous content
 
     const today = dayjs();
     const year = today.year();

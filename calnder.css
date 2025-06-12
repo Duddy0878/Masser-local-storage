@@ -2,26 +2,44 @@ h3{
     cursor: default;
 }
 .calnder {
- margin-top: 200px;
+    display: none;
+    width:100%;
+    height: 100%;
+    border: solid 4px white;
+    background: rgb(41, 173, 190);;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.x{
+    position: absolute;
+    top: 20px;
+    right: 34px;
+}
+
+.auto{
+    position: absolute;
+    color: rgb(41, 173, 190);
+    top: 40px;
+    left: 64px;
+}
+.auto:hover, 
+.x:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1.2);
 }
 
 .calnder table {
-    width: 300px;
+    width: 350px;
+    height: 250px;
 }
 
 .calnder td{
    width: 30px;
    padding-left: 16px;
    padding-right: 16px;
-}
-
-.today {
-    border: 2px solid #29adbe;
-    border-radius: 50%;
-    font-weight: bold;
-    color: #29adbe;
-    background: #fff !important;
-    box-sizing: border-box;
 }
 
 .month-container {
@@ -49,12 +67,9 @@ h3{
     font-size: 15px;
 }
 .today {
-    border: 2px solid #29adbe;
-    border-radius: 50%;
     font-weight: bold;
     color: #29adbe;
     background: #fff !important;
-    box-sizing: border-box;
 }
 
 .weekPayed{
