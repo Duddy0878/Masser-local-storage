@@ -405,12 +405,17 @@ displayMonth(currentMonth);
 
 function nextMonth(){
     disapapreMonth(currentMonth);
-    currentMonth++;
+    if (currentMonth < 11) {
+        currentMonth++ ; 
+    }
     displayMonth(currentMonth);
 }
 function backMonth(){
     disapapreMonth(currentMonth);
-    currentMonth--;
+    
+    if (currentMonth > 0) {
+        currentMonth-- ; 
+    }
     displayMonth(currentMonth);
 }
 var nextBtn = document.querySelectorAll('.right-arrow');
