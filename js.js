@@ -527,7 +527,8 @@ refresh.addEventListener('click', () => {
     }
   }
   
-  console.log(countNow);
+  maaser.currentBalance = countNow;
+  saveToStorage();
   
 })
 
