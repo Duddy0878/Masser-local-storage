@@ -508,6 +508,30 @@ function disapapreMonth(month) {
   getHtmlMonth.style.display = 'none';
 }
 
+var refresh = document.querySelector('.settings');
+
+refresh.addEventListener('click', () => {
+    
+  var jsonMaaser = maaser;
+  var countNow = 0;
+  for (let i = 0; jsonMaaser.donations.length > i; i++) {
+    if (jsonMaaser.donations[i].type === '++') {
+    countNow += Number(maaser.donations[i].amount);
+    console.log(countNow,'++');
+    
+    }
+    else{
+      countNow -= Number(maaser.donations[i].amount);
+      console.log(countNow ,'--');
+      
+    }
+  }
+  
+  console.log(countNow);
+  
+})
+
+
 
 
 
